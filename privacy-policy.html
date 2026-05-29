@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — DeskFlow Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-deep: #27500A;
+      --green-mid: #3B6D11;
+      --green-light: #639922;
+      --green-pale: #EAF3DE;
+      --beige: #F5F0E8;
+      --beige-dark: #E8E0D0;
+      --text: #1a1a18;
+      --text-muted: #5F5E5A;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: var(--beige);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--green-deep);
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(99,153,34,0.12);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -40px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(99,153,34,0.08);
+    }
+
+    .header-inner { position: relative; z-index: 1; }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3rem;
+    }
+
+    .brand span {
+      color: #97C459;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .header-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #97C459;
+      display: inline-block;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--beige-dark);
+      border-left: 4px solid var(--green-light);
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      color: var(--green-mid);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3rem 2rem;
+    }
+
+    @media (max-width: 540px) {
+      .toc ol { grid-template-columns: 1fr; }
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--green-mid); }
+
+    section {
+      margin-bottom: 2.8rem;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section:nth-child(2) { animation-delay: 0.05s; }
+    section:nth-child(3) { animation-delay: 0.1s; }
+    section:nth-child(4) { animation-delay: 0.15s; }
+    section:nth-child(5) { animation-delay: 0.2s; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-weight: 600;
+      color: var(--green-deep);
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      min-width: 28px;
+      background: var(--green-pale);
+      color: var(--green-mid);
+      border-radius: 50%;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 0.92rem;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    ul li {
+      font-size: 0.9rem;
+      color: var(--text);
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green-light);
+    }
+
+    a {
+      color: var(--green-mid);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(59,109,17,0.25);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: var(--green-deep);
+      border-bottom-color: var(--green-deep);
+    }
+
+    .highlight-box {
+      background: var(--green-pale);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--green-deep);
+      font-size: 0.88rem;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--beige-dark);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .contact-row .label {
+      min-width: 80px;
+      font-weight: 500;
+      color: var(--green-mid);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--beige-dark);
+      background: var(--white);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    footer strong {
+      color: var(--green-mid);
+      font-weight: 500;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--beige-dark);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">Desk<span>Flow</span> Studio</div>
+    <div class="subtitle">Home Office Productivity</div>
+    <div class="header-meta">
+      <span class="dot"></span>
+      Política de Privacidad &nbsp;·&nbsp; Última actualización: Mayo 2026
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <nav class="toc">
+    <div class="toc-title">Contenido</div>
+    <ol>
+      <li><a href="#s1">Responsable del tratamiento</a></li>
+      <li><a href="#s2">Datos que recopilamos</a></li>
+      <li><a href="#s3">Finalidad del tratamiento</a></li>
+      <li><a href="#s4">Base legal</a></li>
+      <li><a href="#s5">Compartición con terceros</a></li>
+      <li><a href="#s6">Conservación de datos</a></li>
+      <li><a href="#s7">Derechos del usuario</a></li>
+      <li><a href="#s8">Seguridad</a></li>
+      <li><a href="#s9">Cookies</a></li>
+      <li><a href="#s10">Menores de edad</a></li>
+      <li><a href="#s11">Cambios en esta política</a></li>
+      <li><a href="#s12">Contacto</a></li>
+    </ol>
+  </nav>
+
+  <section id="s1">
+    <h2><span class="num">1</span> Responsable del tratamiento</h2>
+    <p>El responsable de este perfil de Pinterest y del tratamiento de los datos personales es:</p>
+    <div class="contact-card">
+      <div class="contact-row"><span class="label">Marca</span> DeskFlow Studio</div>
+      <div class="contact-row"><span class="label">Pinterest</span> <a href="https://es.pinterest.com/pedrogonzalezmonjardim" target="_blank">pinterest.com/pedrogonzalezmonjardim</a></div>
+      <div class="contact-row"><span class="label">Email</span> <a href="mailto:pedrogonzalezmonjardim@gmail.com">pedrogonzalezmonjardim@gmail.com</a></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s2">
+    <h2><span class="num">2</span> Datos que recopilamos</h2>
+    <p>A través de nuestro perfil de Pinterest podemos recopilar o acceder a los siguientes datos:</p>
+    <ul>
+      <li>Datos públicos de Pinterest: nombre de usuario, foto de perfil, comentarios, me gusta y repins.</li>
+      <li>Datos proporcionados voluntariamente al enviarnos mensajes directos a través de Pinterest.</li>
+      <li>Datos estadísticos de Pinterest Analytics (alcance, impresiones, clics) — son datos agregados y no personales.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>No recopilamos datos personales sensibles ni realizamos perfilados automatizados de los usuarios.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s3">
+    <h2><span class="num">3</span> Finalidad del tratamiento</h2>
+    <p>Los datos se utilizan exclusivamente para:</p>
+    <ul>
+      <li>Gestionar y publicar contenido sobre productividad, organización y home office.</li>
+      <li>Responder a comentarios, mensajes y consultas de los usuarios.</li>
+      <li>Analizar el rendimiento del contenido para mejorar la cuenta.</li>
+      <li>Proporcionar recomendaciones de productos relacionados con el nicho (home office).</li>
+    </ul>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s4">
+    <h2><span class="num">4</span> Base legal del tratamiento</h2>
+    <p>El tratamiento de sus datos se realiza sobre las siguientes bases legales conforme al RGPD:</p>
+    <ul>
+      <li><strong>Consentimiento</strong> del usuario al interactuar con el perfil (comentar, seguir, enviar mensajes).</li>
+      <li><strong>Interés legítimo</strong> en la gestión y mejora del contenido publicado.</li>
+    </ul>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s5">
+    <h2><span class="num">5</span> Compartición de datos con terceros</h2>
+    <p>No vendemos, alquilamos ni cedemos sus datos personales a terceros. Al utilizar la plataforma Pinterest, los datos están sujetos a la <a href="https://policy.pinterest.com/es/privacy-policy" target="_blank">Política de Privacidad de Pinterest Inc.</a></p>
+    <p>Podemos publicar contenido con enlaces de afiliados (p.ej. Amazon). Al hacer clic en dichos enlaces, serás redirigido a sitios externos con sus propias políticas de privacidad.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s6">
+    <h2><span class="num">6</span> Conservación de los datos</h2>
+    <p>Los datos de interacción (comentarios, mensajes) se conservan mientras el perfil esté activo, o hasta que el usuario solicite su eliminación. Los datos analíticos agregados no contienen información personal identificable.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s7">
+    <h2><span class="num">7</span> Derechos del usuario</h2>
+    <p>En virtud del RGPD y la normativa aplicable, tienes derecho a:</p>
+    <ul>
+      <li>Acceder a tus datos personales.</li>
+      <li>Rectificar datos inexactos o incompletos.</li>
+      <li>Solicitar la supresión de tus datos.</li>
+      <li>Oponerte al tratamiento de tus datos.</li>
+      <li>Solicitar la limitación del tratamiento.</li>
+      <li>Presentar una reclamación ante la <a href="https://www.aepd.es" target="_blank">Agencia Española de Protección de Datos (AEPD)</a>.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Para ejercer cualquiera de estos derechos, contacta con nosotros en: <a href="mailto:pedrogonzalezmonjardim@gmail.com">pedrogonzalezmonjardim@gmail.com</a></p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s8">
+    <h2><span class="num">8</span> Seguridad</h2>
+    <p>Adoptamos medidas técnicas y organizativas razonables para proteger la información que gestionamos. No obstante, al tratarse de una plataforma de terceros, no podemos garantizar la seguridad absoluta de los datos transmitidos a través de Pinterest.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s9">
+    <h2><span class="num">9</span> Cookies y tecnologías de seguimiento</h2>
+    <p>Este perfil de Pinterest no utiliza cookies propias. Pinterest, como plataforma, puede utilizar cookies y tecnologías de seguimiento propias. Consulta la <a href="https://policy.pinterest.com/es/cookies" target="_blank">Política de Cookies de Pinterest</a> para más información.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s10">
+    <h2><span class="num">10</span> Menores de edad</h2>
+    <p>Este perfil no está dirigido a menores de 16 años. Si eres menor de esa edad, te pedimos que no interactúes con nuestro contenido sin el consentimiento de tus padres o tutores legales.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s11">
+    <h2><span class="num">11</span> Cambios en esta política</h2>
+    <p>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Cualquier cambio relevante se comunicará a través del propio perfil de Pinterest. La fecha de la última actualización aparece en la cabecera de este documento.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="s12">
+    <h2><span class="num">12</span> Contacto</h2>
+    <p>Si tienes cualquier pregunta sobre esta Política de Privacidad:</p>
+    <div class="contact-card">
+      <div class="contact-row"><span class="label">Email</span> <a href="mailto:pedrogonzalezmonjardim@gmail.com">pedrogonzalezmonjardim@gmail.com</a></div>
+      <div class="contact-row"><span class="label">Pinterest</span> <a href="https://es.pinterest.com/pedrogonzalezmonjardim" target="_blank">pinterest.com/pedrogonzalezmonjardim</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>DeskFlow Studio</strong> &nbsp;·&nbsp; Política de Privacidad &nbsp;·&nbsp; Mayo 2026<br>
+  <span style="margin-top:0.3rem;display:block;">Home Office Productivity · Pinterest</span>
+</footer>
+
+</body>
+</html>
